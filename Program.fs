@@ -10,7 +10,10 @@ type Feature =
     static member ToJson(feature: Feature) =
         match feature with
         | ElectricWindows -> ToJsonDefaults.ToJson "electric_windows"
-        | _ -> ToJsonDefaults.ToJson "something_else"
+        | PowerSteering -> ToJsonDefaults.ToJson "power_assisted_steering"
+        | AutomaticWipers -> ToJsonDefaults.ToJson "auto_wipers"
+        | CruiseControl -> ToJsonDefaults.ToJson "cc"
+        | Autopilot -> ToJsonDefaults.ToJson "ap"
 
 type Transmission =
     | Automatic
